@@ -37,7 +37,7 @@ export function Footer() {
             {[
               { label: "LinkedIn", icon: ExternalLink, href: "https://www.linkedin.com" },
               { label: "X", icon: MessageCircle, href: "https://x.com" },
-              { label: "Email", icon: Mail, href: "mailto:hello@rohitdas.marketing" },
+              { label: "Email", icon: Mail, href: "mailto:seomoretechies@gmail.com" },
             ].map((item) => (
               <Link
                 key={item.label}
@@ -50,7 +50,7 @@ export function Footer() {
             ))}
           </div>
           <div className="mt-5">
-            <Button href="mailto:hello@rohitdas.marketing?subject=Strategy%20Call%20Request" variant="secondary">
+            <Button href="mailto:seomoretechies@gmail.com?subject=Strategy%20Call%20Request" variant="secondary">
               Contact Rohit
             </Button>
           </div>
