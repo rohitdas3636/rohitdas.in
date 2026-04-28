@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
 import { Button } from "@/components/button";
 import { Reveal } from "@/components/reveal";
+import { contact } from "@/lib/data";
 
 export function Hero() {
   return (
@@ -28,6 +29,14 @@ export function Hero() {
                 View Case Studies
               </Button>
             </div>
+            <a
+              href={contact.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-300/25 bg-emerald-400/10 px-4 py-2 text-sm font-bold text-emerald-100 transition hover:border-emerald-200/50 hover:bg-emerald-400/15"
+            >
+              WhatsApp: <span className="animate-pulse text-white">{contact.whatsappDisplay}</span>
+            </a>
             <div className="mt-9 grid gap-3 text-sm text-mist sm:grid-cols-3">
               {["Clear tracking", "Qualified leads", "Scalable funnels"].map((item) => (
                 <div key={item} className="flex items-center gap-2">

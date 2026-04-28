@@ -16,9 +16,50 @@ import {
 
 export const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "SEOmore", href: "#seomore" },
+  { label: "Socials", href: "#socials" },
   { label: "Results", href: "#case-studies" },
   { label: "Process", href: "#process" },
   { label: "FAQ", href: "#faq" },
+];
+
+export const contact = {
+  email: "seomoretechies@gmail.com",
+  whatsappDisplay: "+91 8340795705",
+  whatsappHref: "https://wa.me/918340795705?text=I%20am%20interested%20in%20your%20services.",
+};
+
+export const socialLinks = [
+  {
+    platform: "LinkedIn",
+    handle: "rohit-das99",
+    href: "https://www.linkedin.com/in/rohit-das99/",
+    description: "Strategy insights, professional updates, and digital marketing thinking.",
+  },
+  {
+    platform: "YouTube",
+    handle: "@rohit_das99",
+    href: "https://www.youtube.com/@rohit_das99",
+    description: "Practical marketing videos, tutorials, campaign breakdowns, and growth ideas.",
+  },
+  {
+    platform: "Facebook",
+    handle: "SEOmore",
+    href: "https://www.facebook.com/SEOmore1",
+    description: "Agency updates, service highlights, client education, and community content.",
+  },
+  {
+    platform: "Instagram",
+    handle: "@seomore1",
+    href: "https://www.instagram.com/seomore1/",
+    description: "Quick tips, proof points, behind-the-scenes work, and digital growth content.",
+  },
+];
+
+export const agencyHighlights = [
+  "Founder-led digital marketing agency focused on measurable business growth.",
+  "Services across SEO, Google Ads, performance marketing, landing pages, CRO, and automation.",
+  "Built for founders and businesses that want clearer tracking, better lead quality, and scalable acquisition.",
 ];
 
 export const painPoints = [

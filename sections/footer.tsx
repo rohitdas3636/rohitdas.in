@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ExternalLink, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/button";
-import { navLinks } from "@/lib/data";
+import { contact, navLinks, socialLinks } from "@/lib/data";
 
 export function Footer() {
   return (
@@ -34,23 +34,38 @@ export function Footer() {
         <div>
           <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-blue-300">Connect</h2>
           <div className="mt-4 flex gap-3">
-            {[
-              { label: "LinkedIn", icon: ExternalLink, href: "https://www.linkedin.com" },
-              { label: "X", icon: MessageCircle, href: "https://x.com" },
-              { label: "Email", icon: Mail, href: "mailto:seomoretechies@gmail.com" },
-            ].map((item) => (
+            {socialLinks.map((item) => (
               <Link
-                key={item.label}
+                key={item.platform}
                 href={item.href}
-                aria-label={item.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.platform}
                 className="grid h-10 w-10 place-items-center rounded-[8px] border border-white/10 bg-white/[0.07] text-steel transition hover:border-blue-300/30 hover:text-white"
               >
-                <item.icon className="h-4 w-4" />
+                <span className="text-xs font-extrabold">{item.platform.slice(0, 2)}</span>
               </Link>
             ))}
+            <Link
+              href={contact.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="grid h-10 w-10 place-items-center rounded-[8px] border border-emerald-300/20 bg-emerald-400/10 text-emerald-100 transition hover:border-emerald-200/40 hover:text-white"
+            >
+              <MessageCircle className="h-4 w-4" />
+            </Link>
+            <Link
+              href={`mailto:${contact.email}`}
+              aria-label="Email"
+              className="grid h-10 w-10 place-items-center rounded-[8px] border border-white/10 bg-white/[0.07] text-steel transition hover:border-blue-300/30 hover:text-white"
+            >
+              <Mail className="h-4 w-4" />
+            </Link>
           </div>
+          <p className="mt-4 text-sm font-semibold text-mist">{contact.whatsappDisplay}</p>
           <div className="mt-5">
-            <Button href="mailto:seomoretechies@gmail.com?subject=Strategy%20Call%20Request" variant="secondary">
+            <Button href={`mailto:${contact.email}?subject=Strategy%20Call%20Request`} variant="secondary">
               Contact Rohit
             </Button>
           </div>

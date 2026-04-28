@@ -1,4 +1,6 @@
 import { Navbar } from "@/components/navbar";
+import { FloatingWhatsapp } from "@/components/floating-whatsapp";
+import { Agency } from "@/sections/agency";
 import { Benefits } from "@/sections/benefits";
 import { CaseStudies } from "@/sections/case-studies";
 import { FinalCta } from "@/sections/final-cta";
@@ -9,6 +11,7 @@ import { Problem } from "@/sections/problem";
 import { Process } from "@/sections/process";
 import { Services } from "@/sections/services";
 import { SocialProof } from "@/sections/social-proof";
+import { SocialMedia } from "@/sections/social-media";
 import { Solution } from "@/sections/solution";
 import { Testimonials } from "@/sections/testimonials";
 
@@ -20,7 +23,9 @@ export default function Home() {
         <Hero />
         <Problem />
         <Solution />
+        <Agency />
         <Services />
+        <SocialMedia />
         <SocialProof />
         <CaseStudies />
         <Testimonials />
@@ -29,6 +34,7 @@ export default function Home() {
         <Faq />
         <FinalCta />
       </main>
+      <FloatingWhatsapp />
       <Footer />
     </>
   );
