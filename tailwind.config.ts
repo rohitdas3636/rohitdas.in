@@ -19,12 +19,17 @@ const config: Config = {
         },
         mist: "#DDE9F8",
         steel: "#8CA6C8",
+        gold: "#D7A84A",
+        emerald: "#10B981",
+        aura: "#A78BFA",
       },
       fontFamily: {
         sans: ["var(--font-manrope)", "ui-sans-serif", "system-ui"],
       },
       boxShadow: {
         glow: "0 20px 80px rgba(28, 77, 141, 0.28)",
+        gold: "0 22px 90px rgba(215, 168, 74, 0.2)",
+        emerald: "0 22px 90px rgba(16, 185, 129, 0.18)",
         soft: "0 16px 60px rgba(0, 0, 0, 0.35)",
       },
       backgroundImage: {

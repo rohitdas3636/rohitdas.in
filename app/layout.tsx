@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     description:
       "Performance marketing, SEO, CRO, lead generation, and funnel strategy for growth-focused businesses.",
   },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

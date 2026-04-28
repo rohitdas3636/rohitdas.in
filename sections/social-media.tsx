@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { Card } from "@/components/card";
 import { Reveal } from "@/components/reveal";
@@ -13,6 +14,17 @@ export function SocialMedia() {
       title="Follow Rohit for digital marketing insights, proof points, and practical growth content."
       description="Connect across the platforms where Rohit shares campaign thinking, SEO education, agency updates, and performance marketing lessons."
     >
+      <Reveal>
+        <div className="mb-6 overflow-hidden rounded-[8px] border border-white/10 bg-white/[0.04] shadow-soft">
+          <Image
+            src="/social-command-visual.svg"
+            alt="Social media command center visual showing LinkedIn, YouTube, WhatsApp, and content performance"
+            width={1100}
+            height={740}
+            className="h-auto w-full"
+          />
+        </div>
+      </Reveal>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {socialLinks.map((social, index) => (
           <Reveal key={social.platform} delay={index * 0.05}>

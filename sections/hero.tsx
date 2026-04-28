@@ -51,21 +51,21 @@ export function Hero() {
         <Reveal delay={0.12} className="relative">
           <div className="glass premium-border relative overflow-hidden rounded-[8px] p-3 shadow-glow">
             <Image
-              src="/performance-dashboard.svg"
-              alt="Performance marketing dashboard showing campaign growth and lead quality signals"
+              src="/rohit-strategy-visual.svg"
+              alt="Premium founder strategy visual showing Rohit Das, marketing analytics, lead growth, and performance signals"
               width={1200}
-              height={860}
+              height={900}
               priority
               className="h-auto w-full rounded-[6px]"
             />
           </div>
-          <div className="glass absolute -bottom-5 left-4 max-w-[260px] rounded-[8px] p-4 sm:left-8">
+          <div className="gold-border absolute -bottom-5 left-4 max-w-[284px] rounded-[8px] p-4 shadow-gold sm:left-8">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">Lead quality</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#FFE6A3]">Premium growth signal</p>
                 <p className="mt-1 text-2xl font-semibold text-white">+72%</p>
               </div>
-              <ArrowUpRight className="h-9 w-9 rounded-full bg-blue-400/15 p-2 text-blue-200" aria-hidden="true" />
+              <ArrowUpRight className="h-9 w-9 rounded-full bg-[#D7A84A]/18 p-2 text-[#FFE6A3]" aria-hidden="true" />
             </div>
           </div>
         </Reveal>

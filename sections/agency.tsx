@@ -1,4 +1,5 @@
 import { Building2, CheckCircle2, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/button";
 import { Reveal } from "@/components/reveal";
@@ -10,7 +11,15 @@ export function Agency() {
     <Section id="seomore" className="pt-4 sm:pt-8">
       <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal>
-          <div className="premium-border rounded-[8px] bg-gradient-to-br from-[#0F2854] via-[#0A1830] to-[#050914] p-7 shadow-glow sm:p-9">
+          <div className="premium-border overflow-hidden rounded-[8px] bg-gradient-to-br from-[#0F2854] via-[#0A1830] to-[#050914] shadow-glow">
+            <Image
+              src="/seomore-agency-visual.svg"
+              alt="SEOmore agency growth visual with campaign charts and founder-led marketing signals"
+              width={1100}
+              height={760}
+              className="h-auto w-full border-b border-white/10"
+            />
+            <div className="p-7 sm:p-9">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.07] px-4 py-2 text-sm font-semibold text-mist">
               <Building2 className="h-4 w-4 text-blue-300" aria-hidden="true" />
               Founder of SEOmore
@@ -33,14 +42,15 @@ export function Agency() {
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
+            </div>
           </div>
         </Reveal>
 
         <Reveal delay={0.1}>
           <div className="grid gap-4">
             {agencyHighlights.map((highlight) => (
-              <div key={highlight} className="rounded-[8px] border border-white/10 bg-white/[0.045] p-5">
-                <CheckCircle2 className="mb-4 h-6 w-6 text-blue-300" aria-hidden="true" />
+              <div key={highlight} className="gold-border rounded-[8px] p-5">
+                <CheckCircle2 className="mb-4 h-6 w-6 text-[#FFE6A3]" aria-hidden="true" />
                 <p className="text-base font-semibold leading-7 text-mist">{highlight}</p>
               </div>
             ))}

@@ -5,6 +5,12 @@ import { Section } from "@/components/section";
 import { caseStudies } from "@/lib/data";
 
 export function CaseStudies() {
+  const resultStyles = [
+    "border-[#D7A84A]/30 bg-[#D7A84A]/12 text-[#FFE6A3]",
+    "border-emerald-300/25 bg-emerald-400/10 text-emerald-100",
+    "border-fuchsia-300/25 bg-fuchsia-400/10 text-fuchsia-100",
+  ];
+
   return (
     <Section
       id="case-studies"
@@ -26,7 +32,7 @@ export function CaseStudies() {
               <div className="mt-6 space-y-5 text-sm leading-7">
                 <p className="text-steel"><span className="font-bold text-mist">Problem:</span> {study.problem}</p>
                 <p className="text-steel"><span className="font-bold text-mist">Strategy:</span> {study.strategy}</p>
-                <p className="rounded-[8px] border border-blue-300/[0.18] bg-blue-300/10 p-4 font-semibold text-white">
+                <p className={`rounded-[8px] border p-4 font-semibold ${resultStyles[index % resultStyles.length]}`}>
                   {study.result}
                 </p>
               </div>
