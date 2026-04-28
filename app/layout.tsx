@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${manrope.variable} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${manrope.variable} antialiased`} suppressHydrationWarning>
         <div className="noise" aria-hidden="true" />
         {children}
       </body>
