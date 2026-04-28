@@ -1,12 +1,17 @@
+"use client";
+
 import { Building2, CheckCircle2, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/button";
+import { useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { Section } from "@/components/section";
+import { WorkWithSeomoreModal } from "@/components/work-with-seomore-modal";
 import { agencyHighlights, contact } from "@/lib/data";
 
 export function Agency() {
+  const [open, setOpen] = useState(false);
+
   return (
     <Section id="seomore" className="pt-4 sm:pt-8">
       <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -31,7 +36,13 @@ export function Agency() {
               Rohit Das founded SEOmore to help businesses move from scattered marketing activity to clear, measurable growth. The agency brings SEO, paid acquisition, conversion strategy, and automation together for brands that want better leads and stronger ROI.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Button href="#strategy-call">Work with SEOmore</Button>
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-r from-[#1C4D8D] to-[#3D7ED6] px-5 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5"
+              >
+                Work with SEOmore
+              </button>
               <Link
                 href="https://www.facebook.com/SEOmore1"
                 target="_blank"
@@ -63,6 +74,7 @@ export function Agency() {
           </div>
         </Reveal>
       </div>
+      <WorkWithSeomoreModal open={open} onClose={() => setOpen(false)} />
     </Section>
   );
 }

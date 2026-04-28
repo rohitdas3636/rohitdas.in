@@ -38,8 +38,8 @@ export function Hero() {
               WhatsApp: <span className="animate-pulse text-white">{contact.whatsappDisplay}</span>
             </a>
             <div className="mt-9 grid gap-3 text-sm text-mist sm:grid-cols-3">
-              {["Clear tracking", "Qualified leads", "Scalable funnels"].map((item) => (
-                <div key={item} className="flex items-center gap-2">
+              {["Founder-led strategy", "Clear tracking", "Quality lead focus"].map((item) => (
+                <div key={item} className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.045] px-3 py-2">
                   <CheckCircle2 className="h-4 w-4 text-blue-300" aria-hidden="true" />
                   <span>{item}</span>
                 </div>

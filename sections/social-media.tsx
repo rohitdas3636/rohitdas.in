@@ -29,15 +29,15 @@ export function SocialMedia() {
         {socialLinks.map((social, index) => (
           <Reveal key={social.platform} delay={index * 0.05}>
             <Link href={social.href} target="_blank" rel="noopener noreferrer" className="block h-full">
-              <Card className="group h-full">
+              <Card className={`group h-full ${social.ringClass}`}>
                 <div className="mb-6 flex items-center justify-between gap-4">
-                  <span className="grid h-12 w-12 place-items-center rounded-[8px] bg-gradient-to-br from-[#1C4D8D] to-[#0F2854] text-sm font-extrabold text-white">
+                  <span className={`grid h-12 w-12 place-items-center rounded-[8px] bg-gradient-to-br ${social.brandClass} text-sm font-extrabold text-white shadow-soft`}>
                     {social.platform.slice(0, 2)}
                   </span>
-                  <ArrowUpRight className="h-5 w-5 text-blue-300 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+                  <ArrowUpRight className="h-5 w-5 text-white transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">{social.platform}</h3>
-                <p className="mt-2 text-sm font-bold text-blue-200">{social.handle}</p>
+                <p className="mt-2 text-sm font-bold text-white/85">{social.handle}</p>
                 <p className="mt-4 text-sm leading-7 text-steel">{social.description}</p>
               </Card>
             </Link>

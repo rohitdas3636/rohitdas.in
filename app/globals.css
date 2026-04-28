@@ -72,3 +72,28 @@ body {
   border: 1px solid rgba(16, 185, 129, 0.26);
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(255, 255, 255, 0.04));
 }
+
+@keyframes whatsapp-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.03);
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.42);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.whatsapp-live {
+  animation: whatsapp-float 2.4s ease-in-out infinite, whatsapp-pulse 2s ease-out infinite;
+}
