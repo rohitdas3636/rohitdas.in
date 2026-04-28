@@ -39,10 +39,11 @@ export function WorkWithSeomoreModal({ open, onClose }: WorkWithSeomoreModalProp
           <button
             type="button"
             onClick={onClose}
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-[8px] border border-white/10 bg-white/[0.06] text-white hover:bg-white/[0.1]"
+            className="inline-flex min-h-10 shrink-0 items-center justify-center gap-2 rounded-full border border-red-300/40 bg-red-500 px-4 py-2 text-sm font-extrabold text-white shadow-[0_12px_40px_rgba(239,68,68,0.28)] transition hover:-translate-y-0.5 hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-200 focus:ring-offset-2 focus:ring-offset-ink"
             aria-label="Close SEOmore application form"
           >
             <X className="h-5 w-5" aria-hidden="true" />
+            <span>Close</span>
           </button>
         </div>
 
