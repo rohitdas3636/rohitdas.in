@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -9,7 +10,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rohitdas.marketing"),
+  metadataBase: new URL("https://www.rohitdas.in"),
   title: {
     default: "Rohit Das | Digital Marketing Strategist & Performance Expert",
     template: "%s | Rohit Das",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     title: "Rohit Das | High-Performance Digital Marketing",
     description:
       "Generate better leads, reduce wasted ad spend, and scale with data-driven digital marketing strategy.",
-    url: "https://rohitdas.marketing",
+    url: "https://www.rohitdas.in",
     siteName: "Rohit Das",
     type: "website",
   },
@@ -44,6 +45,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWSNTJYNDT" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-HWSNTJYNDT');
+            `,
+          }}
+        />
+      </head>
       <body className={`${manrope.variable} antialiased`} suppressHydrationWarning>
         <div className="noise" aria-hidden="true" />
         {children}
