@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -46,18 +45,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} antialiased`} suppressHydrationWarning>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-HWSNTJYNDT"
-          strategy="beforeInteractive"
-        />
-        <Script id="google-analytics" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HWSNTJYNDT');
-          `}
-        </Script>
         <div className="noise" aria-hidden="true" />
         {children}
       </body>
