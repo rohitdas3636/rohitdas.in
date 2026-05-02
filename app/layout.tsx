@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={`${manrope.variable} antialiased`} suppressHydrationWarning>
         <div className="noise" aria-hidden="true" />
         {children}
+        <GoogleAnalytics gaId="G-HWSNTJYNDT" />
       </body>
     </html>
   );
