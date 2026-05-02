@@ -10,7 +10,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.4",
     "@tailwindcss/postcss": "latest",
     "clsx": "latest",
     "lucide-react": "latest",
